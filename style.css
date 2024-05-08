@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px;
+}
+h2 {
+  text-align: center;
+}
+
+fieldset {
+  margin: 10px auto;
+  padding: 10px;
+  width: 35%;
+  border-radius: 10px;
+}
+
+legend {
+  padding: 0 5px;
+}
+
+input[name='amount-group'] {
+  width: 2rem;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolosalon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Kolosalon</h1>
+    <h2>Objednávkový formulář pro zapujčení kola</h2>
+    <form name="formBikeOrder">
+      <!-- druh kola a doba zápujčky -->
+      <fieldset>
+        <legend>Zvolte druh kola a počet</legend>
+        <!-- horské -->
+        <label>
+          <input type="checkbox" name="chb-group" id="mountainBike" value="500" />
+          Horské kolo - 500 Kč/den
+          <input type="number" name="amount-group" id="mountainBikeAmount" min="1" value="1" disabled /> ks
+        </label>
+        <br />
+        <!-- dětské -->
+        <label>
+          <input type="checkbox" name="chb-group" id="kidsBike" value="200" />
+          Dětské kolo - 200 Kč/den
+          <input type="number" name="amount-group" id="kidsBikeAmount" min="1" value="1" disabled /> ks
+        </label>
+        <br />
+        <!-- silniční -->
+        <label>
+          <input type="checkbox" name="chb-group" id="roadBike" value="1500" />
+          Silniční kolo - 1 500 Kč/den
+          <input type="number" name="amount-group" id="roadBikeAmount" min="1" value="1" disabled /> ks
+        </label>
+        <br />
+        <!-- gravel -->
+        <label>
+          <input type="checkbox" name="chb-group" id="gravelBike" value="2500" />
+          Gravel kolo - 2 500 Kč/den
+          <input type="number" name="amount-group" id="gravelBikeAmount" min="1" value="1" disabled /> ks
+        </label>
+        <br />
+        <!-- doba zápujčky -->
+        <label for="numberOfDays">Doba zapujčky</label>
+        <select name="numberOfDays" id="numberOfDays">
+          <option value="0" selected>Vyberte</option>
+          <option value="5">5 dní</option>
+          <option value="7">7 dní</option>
+          <option value="14">14 dní</option>
+          <option value="30">30 dní</option>
+        </select>
+      </fieldset>
+      <!-- cyklonosič -->
+      <fieldset>
+        <legend>Zvolte druh cyklonosiče</legend>
+        <!-- střešní -->
+        <label><input type="radio" name="rb-group" id="bikeCarrier1" value="1.05" /> Cyklonosič střešní (+ 5 % z celkové ceny zápujčky navíc)</label>
+        <br />
+        <!-- na tažné -->
+        <label><input type="radio" name="rb-group" id="bikeCarrier2" value="1.1" /> Cyklonosič na tažné zařízení (+ 10 % z celkové ceny zápujčky navíc)</label>
+        <br />
+        <!-- žádný -->
+        <label><input type="radio" name="rb-group" id="bikeCarrier3" value="1" checked /> Není třeba Cyklonosič</label>
+      </fieldset>
+      <!-- cena -->
+      <fieldset>
+        <legend>Předběžné vyhodnocení objednávky</legend>
+        <!-- cena zadaná zákazníkem -->
+        <label for="customersPrice">Zadejte částku, kterou můžete zaplatit <input type="number" name="customersPrice" id="customersPrice" value="1" min="1" /> Kč</label>
+        <br />
+        <!-- tlačítko zobrazení ceny -->
+        <input type="button" value="Zobrazit celkovou cenu" class="btnTotalPrice" onclick="showPrice()" disabled />
+        <label class="totalPrice"></label>
+        <br />
+        <!-- info pro zákazníka -->
+        <label class="infoForCustomer">Vyplňte potřebné údaje</label>
+      </fieldset>
+      <!-- kontakt -->
+      <fieldset>
+        <legend>Kontakt</legend>
+        <label for="customerEmail">Zadejte Váš e-mail</label>
+        <input type="email" name="customerEmail" id="customerEmail" />
+        <br />
+        <input type="button" value="Odeslat objednávku" class="btnSendOrder" onclick="sendOrder()" disabled />
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
