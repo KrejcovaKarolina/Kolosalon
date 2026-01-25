@@ -14,7 +14,7 @@ The reservation form is divided into four logical sections:
 
 1. **Rental Configuration:** Select the type of bike, quantity, and duration of the rental.
 2. **Add-ons:** Option to include a bike rack in the order.
-3. **Budget Evaluation:** \* Users can input their maximum budget.
+3. **Budget Evaluation:** Users can input their maximum budget.
    - Price Calculation: Instant comparison between total rental cost and user's budget.
    - Visual feedback: The information message changes color (green for "within budget", red for "over budget").
    - Calculation button remains `disabled` until all required fields are filled.
@@ -34,4 +34,4 @@ This project demonstrates:
 Since this is a static website, no installation is required:
 
 1. Clone the repository:
-   `git clone https://github.com/KrejcovaKarolina/Kolosalon.git`
+   - `git clone https://github.com/KrejcovaKarolina/Kolosalon.git`
