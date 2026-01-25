@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolosalon | Krejčová Karolína</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../../Logo-simple-gray.svg" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+  </head>
+  <body>
+    <h1>Kolosalon</h1>
+    <form>
+      <h2>Rezevační formulář</h2>
+      <!-- Druh kola, počet a doba -->
+      <fieldset>
+        <legend>Zvolte druh kola a počet *</legend>
+        <table>
+          <tr class="table-head">
+            <th>Druh kola</th>
+            <th>Cena</th>
+            <th>Množství</th>
+          </tr>
+          <tr>
+            <td>Horské kolo</td>
+            <td>1 500 Kč / den</td>
+            <td class="bike-type" id="mountainBikeAmount">
+              <input type="hidden" value="1500" />
+              <input type="button" class="increase" value="+" />
+              <input type="number" name="bike-amount" min="0" value="0" />
+              <input type="button" class="decrease" value="-" />
+            </td>
+          </tr>
+          <tr>
+            <td>Dětské kolo</td>
+            <td>&nbsp; &nbsp;700 Kč / den</td>
+            <td class="bike-type" id="kidsBike">
+              <input type="hidden" value="700" />
+              <input type="button" class="increase" value="+" />
+              <input type="number" name="bike-amount" min="0" value="0" />
+              <input type="button" class="decrease" value="-" />
+            </td>
+          </tr>
+          <tr>
+            <td>Silniční kolo</td>
+            <td>1 000 Kč / den</td>
+            <td class="bike-type" id="roadBikeAmount">
+              <input type="hidden" value="1000" />
+              <input type="button" class="increase" value="+" />
+              <input type="number" name="bike-amount" min="0" value="0" />
+              <input type="button" class="decrease" value="-" />
+            </td>
+          </tr>
+          <tr>
+            <td>Gravel kolo</td>
+            <td>2 000 Kč / den</td>
+            <td class="bike-type" id="gravelBike">
+              <input type="hidden" value="2000" />
+              <input type="button" class="increase" value="+" />
+              <input type="number" name="bike-amount" min="0" value="0" />
+              <input type="button" class="decrease" value="-" />
+            </td>
+          </tr>
+        </table>
+        <label for="loan-period">Doba zápůjčky *</label>
+        <select name="loan-period" id="loan-period">
+          <option value="0">--Vyberte--</option>
+          <option value="3">3 dny</option>
+          <option value="5">5 dní</option>
+          <option value="7">7 dní</option>
+          <option value="10">10 dní</option>
+          <option value="14">14 dní</option>
+        </select>
+      </fieldset>
+      <!-- Cyklonosič -->
+      <fieldset>
+        <legend>Zvolte druh cyklonosiče</legend>
+        <div>
+          <input type="radio" name="bike-carrier" id="bike-carrier-none" value="1" checked />
+          <label for="bike-carrier-none">&nbsp;Cyklonosič není třeba</label>
+        </div>
+        <div>
+          <input type="radio" name="bike-carrier" id="bike-carrier-towing-device" value="1.05" />
+          <label for="bike-carrier-towing-device">&nbsp;Cyklonosič na tažné zařízení (+ 5 % z celkové ceny)</label>
+        </div>
+        <div>
+          <input type="radio" name="bike-carrier" id="bike-carrier-roof" value="1.1" />
+          <label for="bike-carrier-roof">&nbsp;Cyklonosič střešní (+ 10 % z celkové ceny)</label>
+        </div>
+      </fieldset>
+      <!-- Předběžné vyhodnocení objednávky -->
+      <fieldset>
+        <legend>Předběžné vyhodnocení objednávky</legend>
+        <label for="budget">Jaký máte rozpočet? (v Kč) *</label>
+        <input type="number" name="budget" id="budget" placeholder="5000" />
+        <div class="message"></div>
+        <input class="btn" type="button" id="price-btn" value="Zobrazit cenu" disabled />
+      </fieldset>
+      <!-- Kontakní údaje -->
+      <fieldset>
+        <legend>Kontakní údaje</legend>
+        <label for="email">Zadejte Váš email</label>
+        <input type="email" name="email" id="email" placeholder="jan.novak@email.cz" />
+        <input class="btn" type="submit" id="send-order" onclick="{sendOrder()}" value="Odeslat rezevaci" disabled />
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+:root {
+  --bg: linear-gradient(117deg, #efd5ff 0%, #515ada 100%);
+  --bg-form: #f6f6f6;
+  --text: black;
+  --btn: rgb(60, 22, 228);
+  --btn-disabled: gray;
+  --success: green;
+  --info: rgb(0, 94, 255);
+  --danger: red;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+h1 {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+form {
+  background-color: var(--bg-form);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+h2 {
+  text-align: center;
+}
+fieldset {
+  padding: 28px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  margin: 7px;
+  border-color: var(--text);
+}
+legend {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  font-size: 17px;
+  font-weight: 500;
+}
+table {
+  border-collapse: collapse;
+  margin: 3px 0 7px;
+  border: 1px solid var(--text);
+  vertical-align: middle;
+}
+.table-head {
+  border-bottom: 1px solid var(--text);
+}
+th {
+  font-weight: 500;
+  border: 1px solid var(--text);
+}
+tr:nth-child(2n) {
+  background-color: var(--table);
+}
+tr:nth-child(2n + 1) {
+  background-color: var(--bg-form);
+}
+td:first-child {
+  padding-left: 3px;
+}
+td:nth-child(n + 2) {
+  border-left: 1px solid var(--text);
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[name='bike-amount'] {
+  width: 30px;
+  text-align: center;
+  margin: 0 3px;
+  border: none;
+  background-color: transparent;
+}
+.decrease,
+.increase {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid var(--text);
+  height: 19px;
+  width: 19px;
+  border-radius: 3px;
+}
+select {
+  width: min-content;
+  padding: 2px 7px;
+  margin-top: 3px;
+  background-color: transparent;
+  border-radius: 7px;
+  border-color: var(--text);
+}
+#budget,
+#email {
+  width: 300px;
+  padding: 3px 7px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 1.5px solid var(--text);
+  border-radius: 7px;
+}
+.message {
+  margin-top: 3px;
+}
+
+.btn {
+  width: 150px;
+  border: none;
+  margin: 10px auto;
+  padding: 4px;
+  background-color: var(--btn);
+  border-radius: 8px;
+  color: var(--bg-form);
+}
+.btn:disabled {
+  background-color: var(--btn-disabled);
+}
