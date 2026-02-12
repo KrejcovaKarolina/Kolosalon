@@ -8,7 +8,7 @@ A lightweight web application designed to calculate bike rental costs. This proj
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=yellow)
 
-## 🌟 Key Features
+## 🚀 Key Features
 
 The reservation form is divided into four logical sections:
 
@@ -29,7 +29,7 @@ This project demonstrates:
 - **Event Listeners:** Tracking user input to enable/disable buttons dynamically.
 - **DOM Manipulation:** Updating text content and CSS styles (colors) based on calculation results.
 
-## 🚀 How to Run Locally
+## ⚙️ How to Run Locally
 
 Since this is a static website, no installation is required:
 
